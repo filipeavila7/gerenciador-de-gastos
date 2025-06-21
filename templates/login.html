@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/login.css">
+    </head>
+    <body>
+        <main>
+            <div class="login">
+
+                <h1>Login</h1>
+
+                <form action="/login" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" class="email_login" name="email" required
+                        placeholder="exemplo@email.com">
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" class="senha_login" name="senha" required
+                        placeholder="Digite sua senha">
+                    
+                    <button type="submit">Entrar</button>
+                </form>
+
+            </div>
+        </main>
+    </body>
+</html>

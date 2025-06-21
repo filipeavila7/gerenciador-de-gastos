@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+/* Modal: fundo escuro transparente */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 20, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa central do modal */
+.modal-content {
+  background-color: #2f2f45dd;
+  border: 1px solid #6e48aa80;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px #6e48aa88, 0 0 40px #6e48aa55;
+  color: #e6e6ff;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+}
+
+input[type="number"] {
+  color-scheme: dark; /* Ajuda a adaptar spinners em modo escuro */
+}
+/* Título do modal */
+.modal-content h2 {
+  font-size: 1.8rem;
+  color: #b39ddb;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #a285ff80;
+}
+
+/* Botão X de fechar */
+.modal-content .close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.modal-content .close:hover {
+  color: #fff;
+}
+
+/* Estilo dos campos do formulário */
+.modal-content label {
+  display: block;
+  margin-top: 15px;
+  color: #bdb9d7;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  background-color: #403f5a;
+  border: 2px solid #7a64b9;
+  border-radius: 10px;
+  color: #e6e6ff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: #b39ddb;
+  box-shadow: 0 0 10px #b39ddb88;
+  background-color: #4c4a6e;
+}
+
+/* Botão de salvar */
+.modal-content button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #6e48aa;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #e6e6ff;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #6e48aaa8;
+  transition: 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #8565c4;
+  box-shadow: 0 8px 24px #8565c4cc;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+  font-family: 'Orbitron', sans-serif;
+  color: #c7c7d9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2f2f45;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #6e48aa88;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #b39ddb;
+  margin-bottom: 15px;
+  text-shadow: 0 0 12px #a285ff80;
+}
+
+header button {
+  margin: 5px;
+  padding: 12px 20px;
+  background-color: #6e48aa;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px #6e48aa88;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background-color: #8565c4;
+  box-shadow: 0 8px 24px #8565c4cc;
+}
+
+/* Seção resumo */
+.resumo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #2f2f45dd;
+  border: 1px solid #6e48aa70;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px #6e48aa55;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  color: #b39ddb;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #e6e6ff;
+}
+
+/* Tabela de transações */
+.transacoes {
+  padding: 20px 30px;
+}
+
+.transacoes h2 {
+  font-size: 1.6rem;
+  color: #b39ddb;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2f2f45dd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px #6e48aa55;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #4a4a64;
+  color: #e6e6ff;
+}
+
+th {
+  background-color: #403f5a;
+  color: #b3a8e0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+tbody tr:hover {
+  background-color: #3c3c53;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 20, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #2f2f45dd;
+  border: 1px solid #6e48aa80;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px #6e48aa88, 0 0 40px #6e48aa55;
+  color: #e6e6ff;
+  position: relative;
+}
+
+.modal-content h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #b39ddb;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #a285ff80;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 15px;
+  color: #bdb9d7;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  background-color: #403f5a;
+  border: 2px solid #7a64b9;
+  border-radius: 10px;
+  color: #e6e6ff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: #b39ddb;
+  box-shadow: 0 0 10px #b39ddb88;
+  background-color: #4c4a6e;
+}
+
+.modal-content button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #6e48aa;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #e6e6ff;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #6e48aaa8;
+  transition: 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #8565c4;
+  box-shadow: 0 8px 24px #8565c4cc;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1e1e2f;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.mensagem-status {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2f2f45;
+  color: #b3afff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px #6e48aa80;
+  display: none;
+  z-index: 999;
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}

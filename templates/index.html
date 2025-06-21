@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gerenciador de Despesas</title>
+        <link rel="stylesheet" href="/static/css/index.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Gerenciador de gastos</h1>
+            <button id="btn-add">Adicionar gastos</button>
+            <button id="btn-list">Listar gastos</button>
+            <button id="btn-edit">Editar saldo</button>
+            <button id="btn-edit-gasto">Editar gasto </button>
+        </header>
+
+        <main>
+            <section class="resumo">
+                <div class="card despesa">
+                    <h2>Despesa Total</h2>
+                    <p id="total-despesa">R$ 0,00</p>
+                </div>
+                <div class="card saldo">
+                    <h2>Saldo</h2>
+                    <p id="saldo">R$ 0,00</p>
+                </div>
+            </section>
+
+            <section class="transacoes">
+                <h2>Transações recentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-transacoes">
+                        <!-- Aqui vão as linhas dinâmicas das transações -->
+                    </tbody>
+                </table>
+            </section>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Novo gasto</h2>
+                    <form id="form-transacao">
+                        <label for="nome">Nome (opcional):</label>
+                        <input type="text" id="nome-gasto" name="nome" placeholder="Ex: Mercado" maxlength="20" />
+
+                        <label for="valor">Valor:</label>
+                        <input type="number" id="valor-gasto" name="valor" step="0.01" min="0"
+                            required placeholder="Ex: 100.00" maxlength="10" />
+
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" id="categoria" name="categoria"
+                            required placeholder="Ex: Alimentação" />
+
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" required />
+
+                        <button type="submit">Salvar</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div id="modal-saldo" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Editar saldo</h2>
+                    <form id="form-saldo">
+                        <label for="valor">Valor:</label>
+                        <input type="number" id="valor-saldo" name="valor" step="0.01" min="0" 
+                            required placeholder="Ex: 100.00" maxlength="10" />
+
+                        <button type="submit">Salvar</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div id="modal-gasto" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Editar gasto</h2>
+                    <form id="form-gasto">
+                        <label for="valor">Valor:</label>
+                        <input type="number" id="valor-gasto" name="valor" step="0.01" min="0"
+                            required placeholder="Ex: 100.00" maxlength="10" />
+
+                        <button type="submit">Salvar</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </main>
+
+        <div id="mensagem-status" class="mensagem-status"></div>
+        <footer>
+            <p>© 2025 Shipinn - Gerenciador de Despesas</p>
+        </footer>
+        
+
+        <script src="/static/js/script.js"></script>
+    </body>
+</html>

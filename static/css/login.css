@@ -1,0 +1,103 @@
+body {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #c7c7d9;
+}
+
+.login {
+  background-color: #2f2f45dd; /* fundo semi-transparente escuro */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow:
+    0 0 20px #6e48aa80,
+    0 0 60px #6e48aa50;
+  width: 340px;
+  text-align: center;
+  border: 1px solid #6e48aa80; /* borda roxa suave */
+}
+
+.login h1 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b39ddb;
+  text-shadow: 0 0 10px #a285ff80;
+}
+
+.login label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #bdb9d7;
+  text-align: left;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 8px;
+  border: 2px solid #7a64b9;
+  border-radius: 10px;
+  background-color: #403f5a;
+  color: #e6e6ff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login input::placeholder {
+  color: #9f99bd;
+}
+
+.login input:focus {
+  border-color: #b39ddb;
+  box-shadow: 0 0 12px #b39ddb99;
+  background-color: #4c4a6e;
+}
+
+.login button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #6e48aa;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #e6e6ff;
+  cursor: pointer;
+  box-shadow:
+    0 5px 15px #6e48aaaa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #8565c4;
+  box-shadow:
+    0 8px 24px #8565c4cc;
+}
+
+.login p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #b3afffdd;
+}
+
+.login p a {
+  color: #b39ddb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login p a:hover {
+  text-decoration: underline;
+}
