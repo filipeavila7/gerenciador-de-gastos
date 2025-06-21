@@ -98,7 +98,8 @@ body {
   font-weight: 600;
 }
 
-.login p a:hover {
+
+.login a:hover {
   text-decoration: underline;
 }
 
@@ -107,13 +108,16 @@ body {
   display: inline-block;
   margin-top: 18px;
   color: #b39ddb;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   font-size: 0.98rem;
   background: none;
   border: none;
 }
 
+.login p a:hover {
+  text-decoration: underline;
+}
 
 login form.hide-up {
   transform: translateY(-120%);
