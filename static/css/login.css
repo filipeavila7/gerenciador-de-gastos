@@ -101,3 +101,28 @@ body {
 .login p a:hover {
   text-decoration: underline;
 }
+
+
+.login a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #b39ddb;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.98rem;
+  background: none;
+  border: none;
+}
+
+
+login form.hide-up {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login form.show-down {
+  transform: translateY(0%);
+  opacity: 1;
+  pointer-events: all;
+}

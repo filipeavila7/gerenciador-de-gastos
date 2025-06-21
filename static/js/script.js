@@ -169,3 +169,7 @@ formEditarGasto.addEventListener("submit", (e) => {
     alert("Digite um valor válido.");
   }
 });
+
+document.getElementById('btn-list').onclick = function() {
+  window.location.href = '/listar.html';
+};
